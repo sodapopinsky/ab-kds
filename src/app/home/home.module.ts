@@ -7,8 +7,10 @@ import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 import { OrderComponent } from './order/order.component';
 
+import { MomentModule } from 'ngx-moment';
 @NgModule({
   imports: [
+    MomentModule,
     CommonModule,
     FormsModule,
     IonicModule,

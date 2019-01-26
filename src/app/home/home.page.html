@@ -1,7 +1,7 @@
 <ion-content>
   <div class="ab-home">
     <div class="ab-home-sidebar">
-      Orders
+      <ab-order *ngFor="let order of orders" [order]="order"></ab-order>
     </div>
     <div class="ab-home-main">
         <div class="ab-grill"></div>

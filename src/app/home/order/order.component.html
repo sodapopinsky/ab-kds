@@ -1,3 +1,13 @@
-<p>
-  order works!
-</p>
+<div class="ab-order-header">
+  <ion-grid>
+    <ion-row>
+      <ion-col text-start>
+       {{order.name}}
+      </ion-col>
+      <ion-col text-end>
+       {{duration(order.createdAt)}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</div>
