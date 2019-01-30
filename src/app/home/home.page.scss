@@ -1,10 +1,9 @@
-.ab-home{
+.ab-home {
     display: flex;
     flex-direction: row;
     height: 100%;
     color: #FAFAFA;
     background-color: #000;
-
     .ab-home-sidebar {
         width: 250px;
         border-right: 1px solid #FAFAFA;
@@ -17,12 +16,44 @@
         justify-content: center;
         align-items: center;
         .ab-grill {
+            position: relative;
+           
+            ion-grid {
+                height: 100%;
+                ion-row {
+                    height: 33.33%;
+                    align-items: center;
+                }
+                ion-col {
+                    .ab-grill-cell {
+                        position: relative;
+                        height: 100%;
+                        width: 100%;
+                        .ab-grill-item {
+                            position: absolute;
+                            top: calc(50% - 10px);
+                            left: calc(50% - 10px);
+                            height: 20px;
+                            width: 20px;
+                        }
+                        .ab-grill-cursor {
+                            position: absolute;
+                            right: 0;
+                            top: calc(50% - 12px);
+                            width: 12px;
+                            height: 24px;
+                        }
+                    }
+                   
+                }
+            }
             width: 400px;
             height: 300px;
-            border:  1px solid #FAFAFA;
+            border: 1px solid #FAFAFA;
         }
     }
 }
+
 ion-footer {
     background-color: #000;
     color: #FAFAFA;

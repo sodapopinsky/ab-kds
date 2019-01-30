@@ -1,10 +1,45 @@
 <ion-content>
-  <div class="ab-home">
+  <div class="ab-home" *ngIf="!loading">
     <div class="ab-home-sidebar">
       <ab-order *ngFor="let order of orders" [order]="order"></ab-order>
     </div>
     <div class="ab-home-main">
-        <div class="ab-grill"></div>
+        <div class="ab-grill">
+           
+            
+          <ion-grid>
+           
+          
+            <ion-row>
+                <ion-col text-center  *ngFor="let i of [10, 7, 4, 1]" style="height: 100%;">
+                  <div class="ab-grill-cell">
+                      <img *ngIf="queue[i]" (click)="bumpItem(i)" src="assets/{{getImage(i)}}" class="ab-grill-item">
+                      <img *ngIf="cursor == i" src="assets/cursor.png" class="ab-grill-cursor">
+                  </div>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col text-center  *ngFor="let i of [11, 8, 5, 2]" >
+                  <div class="ab-grill-cell">
+                      <img *ngIf="queue[i]" (click)="bumpItem(i)" src="assets/{{getImage(i)}}" class="ab-grill-item">
+                      <img *ngIf="cursor == i" src="assets/cursor.png" class="ab-grill-cursor">
+                  </div>
+              </ion-col>
+            
+            </ion-row>
+
+            <ion-row>
+                <ion-col text-center  *ngFor="let i of [12, 9, 6, 3]">
+                    <div class="ab-grill-cell">
+                        <img *ngIf="queue[i]" (click)="bumpItem(i)" src="assets/{{getImage(i)}}" class="ab-grill-item">
+                        <img *ngIf="cursor == i" src="assets/cursor.png" class="ab-grill-cursor">
+                    </div>
+                </ion-col>
+
+            </ion-row>
+          
+          </ion-grid>
+        </div>
       </div>
   </div>
 
@@ -15,7 +50,7 @@
     <ion-row>
       <ion-col></ion-col>
       <ion-col text-center>Grill 1</ion-col>
-      <ion-col></ion-col>
+      <ion-col><button (click)="addItem()">add item</button></ion-col>
     </ion-row>
   </ion-grid>
 </ion-footer>

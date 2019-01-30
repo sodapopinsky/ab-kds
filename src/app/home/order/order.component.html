@@ -1,3 +1,6 @@
+<div class="ab-order">
+
+
 <div class="ab-order-header">
   <ion-grid>
     <ion-row>
@@ -10,4 +13,18 @@
     </ion-row>
   </ion-grid>
 
+</div>
+
+<div class="ab-order-body">
+  <div *ngFor="let item of order.items" [ngClass]="{'bumped': item.bumped}">
+    <ion-grid>
+      <ion-row justify-content-between>
+        <ion-col>{{item.type}}</ion-col>
+        <ion-col>{{item.position}}</ion-col>
+      </ion-row>
+    </ion-grid>
+   
+  </div>
+
+</div>
 </div>

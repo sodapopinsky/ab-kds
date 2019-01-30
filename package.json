@@ -26,6 +26,7 @@
     "@ionic/angular": "^4.0.0",
     "ab-shared": "git+https://github.com/sodapopinsky/ab-shared.git",
     "core-js": "^2.5.4",
+    "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.23",
     "ngx-moment": "^3.3.0",

@@ -1,0 +1,18 @@
+.ab-order {
+    color: #000;
+    .ab-order-header {
+        background-color: #FAFAFA;
+        color: #000;
+    }
+    .ab-order-body {
+        font-size: 13px;
+        background-color: #9AFA98;
+        div {
+            padding: 5px;
+            border-bottom: 1px solid rgba(0,0,0, 0.12);
+            &.bumped {
+                text-decoration-line: line-through;
+            }
+        }
+    }
+}
