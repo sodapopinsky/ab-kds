@@ -37,8 +37,8 @@ export class HomePage {
         name: "Test 2",
         createdAt: moment().format(),
         items: [
-          { type: "burger", cheese: "american" },
-          { type: "burger", cheese: "american" }
+          { type: "turkey", cheese: "american" },
+          { type: "turkey", cheese: "american" }
         ]
       }
     ];
@@ -57,6 +57,22 @@ export class HomePage {
     });
     this.updateGrill();
   }
+  getMain(index) {
+    const type = this.queue[index].type;
+    if (type === "burger") {
+      return "ab-grill-burger";
+    }
+    if (type === "turkey") {
+      return "ab-grill-turkey";
+    }
+  }
+  getCheese(index) {
+    return "ab-grill-american";
+  }
+  getModifier(index) {
+    return "S";
+  }
+
   updateGrill() {
     this.cursor = null;
     let lastPosition = 0;
@@ -76,7 +92,8 @@ export class HomePage {
               this.queue[item.position] = {
                 orderId: order.id,
                 orderIndex: orderIndex,
-                itemIndex: itemIndex
+                itemIndex: itemIndex,
+                type: item.type
               };
             } else {
               lastPosition++;
@@ -89,7 +106,8 @@ export class HomePage {
                   this.queue[item.position] = {
                     orderId: order.id,
                     orderIndex: orderIndex,
-                    itemIndex: itemIndex
+                    itemIndex: itemIndex,
+                    type: item.type
                   };
                 } else {
                   lastPosition--;

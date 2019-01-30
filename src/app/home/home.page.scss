@@ -29,12 +29,54 @@
                         position: relative;
                         height: 100%;
                         width: 100%;
-                        .ab-grill-item {
+                     
+                        // .ab-grill-item {
+                        //     position: absolute;
+                        //     top: calc(50% - 20px);
+                        //     left: calc(50% - 20px);
+                        //     height: 40px;
+                        //     width: 40px;
+                        //     z-index: 1;
+                        //     border-radius: 20px;
+                        //     &.ab-grill-burger {
+                        //         background-color: red;
+                        //     }
+                        // }
+                        .ab-grill-main {
                             position: absolute;
-                            top: calc(50% - 10px);
-                            left: calc(50% - 10px);
-                            height: 20px;
-                            width: 20px;
+                            z-index: 1;
+                            top: calc(50% - 30px);
+                            left: calc(50% - 30px);
+                        
+                            &.ab-grill-burger{
+                                height: 60px;
+                                width: 60px;
+                                border-radius: 30px;
+                                background-color: red;
+                            }
+                            &.ab-grill-turkey{
+                                height: 60px;
+                                width: 60px;
+                                border-radius: 30px;
+                                background-color: green;
+                            }
+                            
+                        }
+
+                        .ab-grill-cheese {
+                            position: absolute;
+                            z-index: 2;
+                            top: calc(50% - 15px);
+                            left: calc(50% - 15px);
+                            height: 30px;
+                            width: 30px;
+                            color: #000;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            &.ab-grill-american{
+                                background-color: yellow;
+                            }
                         }
                         .ab-grill-cursor {
                             position: absolute;
